@@ -3,7 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Frame Factory – Fábrica de Aberturas en PVC</title>
+  <title>Frame Factory – Fábrica de Aberturas en PVC | Fenstech Veratec</title>
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg" />
+  <link rel="icon" type="image/png" href="img/logo.png" />
+  <link rel="apple-touch-icon" href="img/logo.png" />
+  <meta name="description" content="Frame Factory – Primer taller automatizado de aberturas en PVC de Argentina. Distribuidor Fenstech Veratec. Florencio Varela, Buenos Aires." />
+  <meta property="og:title" content="Frame Factory – Fábrica de Aberturas en PVC" />
+  <meta property="og:description" content="Primer taller automatizado de aberturas en PVC. Distribuidor Fenstech Veratec · Yilmaz · Roto." />
+  <meta property="og:image" content="img/hero/hero1.jpg" />
+  <meta property="og:type" content="website" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
@@ -15,23 +23,17 @@
   <header class="header" id="header">
     <div class="container header__inner">
       <a href="#" class="logo">
-        <img src="https://framefactory.com.ar/wp-content/uploads/2022/05/logo-frame-factory-blanco.png"
+        <img src="img/logo.png"
              alt="Frame Factory"
-             class="logo__img"
-             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
-        <div class="logo__fallback">
-          <div class="logo__icon"><span class="logo__f">F</span></div>
-          <div class="logo__text">
-            <span class="logo__name">FRAME<br>FACTORY</span>
-          </div>
-        </div>
+             class="logo__img" />
       </a>
       <nav class="nav" id="nav">
-        <a href="#empresa"   class="nav__link">Empresa</a>
-        <a href="#productos" class="nav__link">Productos</a>
-        <a href="#galeria"   class="nav__link">Galería</a>
-        <a href="#contacto"  class="nav__link nav__link--cta">Cotizar Proyecto</a>
-        <a href="#footer"    class="nav__link">Contacto</a>
+        <a href="#empresa"    class="nav__link">Empresa</a>
+        <a href="#productos"  class="nav__link">Productos</a>
+        <a href="#colores"    class="nav__link">Colores</a>
+        <a href="#catalogos"  class="nav__link">Catálogos</a>
+        <a href="#galeria"    class="nav__link">Galería</a>
+        <a href="#contacto"   class="nav__link nav__link--cta">Cotizar Proyecto</a>
       </nav>
       <button class="hamburger" id="hamburger" aria-label="Menú">
         <span></span><span></span><span></span>
@@ -44,19 +46,22 @@
     <div class="hero__slides">
       <div class="hero__slide hero__slide--1 active"></div>
       <div class="hero__slide hero__slide--2"></div>
-      <div class="hero__slide hero__slide--3"></div>
     </div>
     <div class="hero__overlay"></div>
     <div class="hero__content container">
+      <p class="hero__eyebrow">FENSTECH · VERATEC · FRAME FACTORY</p>
       <h1 class="hero__title">
         SOMOS TU SOCIO<br>ESTRATÉGICO
       </h1>
-      <p class="hero__subtitle">PARA LA CONSTRUCCIÓN DE ABERTURAS EN PVC</p>
+      <p class="hero__subtitle">FÁBRICA AUTOMATIZADA DE ABERTURAS EN PVC</p>
+      <div class="hero__btns">
+        <a href="#empresa"   class="btn btn--gold">Conocer más</a>
+        <a href="#catalogos" class="btn btn--outline">Ver catálogos</a>
+      </div>
     </div>
     <div class="hero__dots">
       <span class="hero__dot active" data-slide="0"></span>
       <span class="hero__dot" data-slide="1"></span>
-      <span class="hero__dot" data-slide="2"></span>
     </div>
   </section>
 
@@ -69,21 +74,30 @@
       <div class="fase__circles">
         <div class="fase__col">
           <div class="fase__circle">
-            <span>1- CONSTRUCCIÓN<br>DEL MARCO</span>
+            <div class="fase__circle-inner">
+              <span class="fase__num">1</span>
+              <span class="fase__step">CONSTRUCCIÓN<br>DEL MARCO</span>
+            </div>
           </div>
           <p class="fase__sub">FRAME FACTORY</p>
         </div>
         <div class="fase__col">
           <div class="fase__circle">
-            <span>2- ENSAMBLE DE<br>VIDRIOS Y HERRAJES</span>
+            <div class="fase__circle-inner">
+              <span class="fase__num">2</span>
+              <span class="fase__step">ENSAMBLE DE<br>VIDRIOS Y HERRAJES</span>
+            </div>
           </div>
           <p class="fase__sub">TALLERES DE ABERTURAS</p>
         </div>
         <div class="fase__col">
           <div class="fase__circle">
-            <span>3- INSTALACIÓN EN<br>OBRA</span>
+            <div class="fase__circle-inner">
+              <span class="fase__num">3</span>
+              <span class="fase__step">INSTALACIÓN<br>EN OBRA</span>
+            </div>
           </div>
-          <p class="fase__sub">TALLERES DE ABERTURAS O TERCEROS</p>
+          <p class="fase__sub">TALLERES O TERCEROS</p>
         </div>
       </div>
     </div>
@@ -95,30 +109,31 @@
       <div class="upa-eco__header">
         <span class="upa-eco__label">Unidad Productiva Asociada</span>
         <h2 class="upa-eco__title">SUMATE A NUESTRO ECOSISTEMA UPA</h2>
+        <p class="upa-eco__desc">La primera red de Unidades Productivas Asociadas del país. Producimos, vos gestionás y vendés.</p>
       </div>
       <div class="upa-eco__grid">
         <div class="upa-eco__card">
           <div class="upa-eco__img upa-eco__img--arquitectos"></div>
           <div class="upa-eco__content">
             <h3>Arquitectos</h3>
-            <p>Encontrá la solución constructiva ideal para tus proyectos. Trabajamos con los mejores sistemas del mercado.</p>
-            <a href="#contacto" class="btn btn--gold">Ver Brochure</a>
+            <p>Encontrá la solución constructiva ideal para tus proyectos. Trabajamos con los mejores sistemas del mercado: Veratec y Yilmaz, con herrajes Roto.</p>
+            <a href="#catalogos" class="btn btn--gold">Ver Catálogos</a>
           </div>
         </div>
         <div class="upa-eco__card">
           <div class="upa-eco__img upa-eco__img--desarrolladores"></div>
           <div class="upa-eco__content">
             <h3>Desarrolladores</h3>
-            <p>Aumentá la eficiencia de tus desarrollos con aberturas de PVC de alta calidad a gran escala.</p>
-            <a href="#contacto" class="btn btn--gold">Ver Brochure</a>
+            <p>Aumentá la eficiencia de tus desarrollos con aberturas de PVC de alta calidad a gran escala, producidas en nuestro taller automatizado en PITEC.</p>
+            <a href="#contacto" class="btn btn--gold">Cotizar Proyecto</a>
           </div>
         </div>
         <div class="upa-eco__card">
           <div class="upa-eco__img upa-eco__img--carpinteros"></div>
           <div class="upa-eco__content">
             <h3>Carpinteros</h3>
-            <p>Sumá aberturas de PVC a tu taller sin inversión. Nosotros producimos, vos instalás y controlás las ventas.</p>
-            <a href="#contacto" class="btn btn--gold">Ver Brochure</a>
+            <p>Sumá aberturas de PVC a tu taller sin inversión inicial. Nosotros producimos, vos instalás y controlás la relación con tus clientes.</p>
+            <a href="#contacto" class="btn btn--gold">Quiero ser UPA</a>
           </div>
         </div>
       </div>
@@ -133,20 +148,21 @@
         <h2 class="section__title">Somos Frame Factory</h2>
         <p>Somos una empresa perteneciente al grupo <strong>DECSA S.A.</strong> con <strong>25 años de experiencia</strong> produciendo insumos y productos para distintos sectores de la industria.</p>
         <p>Somos el primer <strong>Taller Automatizado de Producción de Aberturas en PVC</strong>, con tecnología de punta instalada en el Parque Industrial PITEC, Florencio Varela.</p>
-        <p>Bajo patrones de eficiencia productiva, tecnología y calidad, creamos la primera red de <strong>Unidades Productivas Asociadas (UPA)</strong> del país.</p>
+        <p>Distribuidor oficial de perfiles <strong>Veratec</strong> e <strong>Yilmaz</strong> con herrajes <strong>Roto Fermax</strong>. Bajo patrones de eficiencia productiva, tecnología y calidad, creamos la primera red de <strong>Unidades Productivas Asociadas (UPA)</strong> del país.</p>
+        <p>Somos representantes oficiales de <strong>Frame Factory</strong> en Uruguay...</p>
         <a href="#upa" class="btn btn--gold" style="margin-top:24px;">Conocé el modelo UPA</a>
       </div>
       <div class="nosotros__stats">
         <div class="stat__card">
-          <span class="stat__num" data-target="25">25</span>
+          <span class="stat__num" data-target="25">0</span>
           <span class="stat__label">Años de experiencia</span>
         </div>
         <div class="stat__card">
-          <span class="stat__num" data-target="70">70</span>
+          <span class="stat__num" data-target="70">0</span>
           <span class="stat__label">Obras realizadas</span>
         </div>
         <div class="stat__card">
-          <span class="stat__num" data-target="430">430</span>
+          <span class="stat__num" data-target="430">0</span>
           <span class="stat__label">Presupuestos</span>
         </div>
         <div class="stat__card">
@@ -159,15 +175,29 @@
 
   <!-- ===== PARTNERS STRIP ===== -->
   <section class="partners-strip">
-    <div class="container partners-strip__grid">
-      <div class="partner-logo partner-logo--veratec">
-        <span>&#9641; VERATEC</span>
-      </div>
-      <div class="partner-logo partner-logo--bestchem">
-        <span>BestChem<sup>®</sup></span>
-      </div>
-      <div class="partner-logo partner-logo--roto">
-        <span>Roto<sup>®</sup></span>
+    <div class="container">
+      <p class="partners-strip__label">NUESTRAS MARCAS Y PARTNERS</p>
+      <div class="partners-strip__grid">
+        <div class="partner-logo partner-logo--veratec">
+          <div class="partner-logo__icon partner-logo__icon--veratec">&#9641;</div>
+          <span>VERATEC</span>
+          <small>Perfiles de PVC</small>
+        </div>
+        <div class="partner-logo partner-logo--fenstech">
+          <div class="partner-logo__icon partner-logo__icon--fenstech">&#8735;</div>
+          <span>FENSTECH</span>
+          <small>Distribuidor Oficial</small>
+        </div>
+        <div class="partner-logo partner-logo--yilmaz">
+          <div class="partner-logo__icon partner-logo__icon--yilmaz">Y</div>
+          <span>YILMAZ</span>
+          <small>Sistemas PVC</small>
+        </div>
+        <div class="partner-logo partner-logo--roto">
+          <img src="img/partners/logo-roto.svg" alt="Roto Fermax" class="partner-logo__svg" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
+          <span style="display:none">Roto<sup>®</sup></span>
+          <small>Herrajes Premium</small>
+        </div>
       </div>
     </div>
   </section>
@@ -177,8 +207,8 @@
     <div class="container">
       <div class="section__header">
         <span class="tag">NUESTROS PRODUCTOS</span>
-        <h2 class="section__title">TIPOLOGÍA</h2>
-        <p class="section__lead">Fabricamos todos los tipos de aberturas en PVC con los mejores sistemas del mercado.</p>
+        <h2 class="section__title">TIPOLOGÍA DE ABERTURAS</h2>
+        <p class="section__lead">Fabricamos todos los tipos de aberturas en PVC con perfiles Veratec e Yilmaz y herrajes Roto Fermax.</p>
       </div>
       <div class="tipo__grid">
         <div class="tipo__card">
@@ -191,19 +221,19 @@
         </div>
         <div class="tipo__card">
           <div class="tipo__img tipo__img--corrediza2"></div>
-          <span class="tipo__name">CORREDIZA DE 2 GUÍAS</span>
+          <span class="tipo__name">CORREDIZA 2 GUÍAS</span>
         </div>
         <div class="tipo__card">
           <div class="tipo__img tipo__img--corrediza3"></div>
-          <span class="tipo__name">CORREDIZA DE 3 GUÍAS</span>
+          <span class="tipo__name">CORREDIZA 3 GUÍAS</span>
         </div>
         <div class="tipo__card">
           <div class="tipo__img tipo__img--abrir1"></div>
-          <span class="tipo__name">DE ABRIR DE 1 HOJA</span>
+          <span class="tipo__name">DE ABRIR 1 HOJA</span>
         </div>
         <div class="tipo__card">
           <div class="tipo__img tipo__img--abrir2"></div>
-          <span class="tipo__name">DE ABRIR DE 2 HOJAS</span>
+          <span class="tipo__name">DE ABRIR 2 HOJAS</span>
         </div>
         <div class="tipo__card">
           <div class="tipo__img tipo__img--oscilo"></div>
@@ -215,7 +245,7 @@
         </div>
         <div class="tipo__card">
           <div class="tipo__img tipo__img--practicable"></div>
-          <span class="tipo__name">PRACTICABLE O DE ABRIR</span>
+          <span class="tipo__name">PRACTICABLE</span>
         </div>
         <div class="tipo__card">
           <div class="tipo__img tipo__img--proyectante"></div>
@@ -225,33 +255,195 @@
     </div>
   </section>
 
+  <!-- ===== COLORES VERATEC ===== -->
+  <section class="colores section section--dark" id="colores">
+    <div class="container">
+      <div class="section__header">
+        <span class="tag tag--light">TERMINACIONES DISPONIBLES</span>
+        <h2 class="section__title section__title--light">PALETA DE COLORES VERATEC</h2>
+        <p class="section__lead" style="color:rgba(255,255,255,0.65)">
+          Diez terminaciones disponibles para personalizar tus aberturas. Algunos colores bajo pedido.
+        </p>
+      </div>
+
+      <div class="colores__layout">
+        <div class="colores__img-wrap">
+          <img src="img/colores/paleta-veratec.jpeg" alt="Paleta de colores Veratec Fenstech" class="colores__img" />
+        </div>
+        <div class="colores__list">
+          <div class="color__item">
+            <div class="color__swatch" style="background:#e8e0d4;"></div>
+            <div class="color__info"><strong>1 – Cottony Winchester</strong><span>Disponible</span></div>
+          </div>
+          <div class="color__item">
+            <div class="color__swatch" style="background:#c8b89a;"></div>
+            <div class="color__info"><strong>2 – Winchester</strong><span>Disponible</span></div>
+          </div>
+          <div class="color__item">
+            <div class="color__swatch" style="background:#a8946a;"></div>
+            <div class="color__info"><strong>3 – Anteak</strong><span>Disponible</span></div>
+          </div>
+          <div class="color__item">
+            <div class="color__swatch" style="background:#b0b8c0; border:1px solid rgba(255,255,255,0.2);"></div>
+            <div class="color__info"><strong>4 – Aluminium</strong><span>Disponible</span></div>
+          </div>
+          <div class="color__item">
+            <div class="color__swatch" style="background:#f5f5f5; border:1px solid rgba(255,255,255,0.2);"></div>
+            <div class="color__info"><strong>5 – Blanco</strong><span>Disponible</span></div>
+          </div>
+          <div class="color__item">
+            <div class="color__swatch" style="background:#b87c30;"></div>
+            <div class="color__info"><strong>6 – Roble Dorado</strong><span class="badge-pedido">Solo a pedido</span></div>
+          </div>
+          <div class="color__item">
+            <div class="color__swatch" style="background:#6b4c30;"></div>
+            <div class="color__info"><strong>7 – Nogal</strong><span class="badge-pedido">Solo a pedido</span></div>
+          </div>
+          <div class="color__item">
+            <div class="color__swatch" style="background:#4a4a4a;"></div>
+            <div class="color__info"><strong>8 – Gris Antracita</strong><span class="badge-pedido">Solo a pedido</span></div>
+          </div>
+          <div class="color__item">
+            <div class="color__swatch" style="background:#2a2420;"></div>
+            <div class="color__info"><strong>9 – Black Brown</strong><span class="badge-pedido">Solo a pedido</span></div>
+          </div>
+          <div class="color__item">
+            <div class="color__swatch" style="background:#0a0a0a; border:1px solid rgba(255,255,255,0.15);"></div>
+            <div class="color__info"><strong>10 – Black Ultimatt</strong><span class="badge-pedido">Solo a pedido</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="colores__cta">
+        <p>¿Querés ver los colores en persona? Visitá nuestro showroom en PITEC, Florencio Varela.</p>
+        <a href="#contacto" class="btn btn--gold">Consultar disponibilidad</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CATÁLOGOS ===== -->
+  <section class="catalogos section section--light" id="catalogos">
+    <div class="container">
+      <div class="section__header">
+        <span class="tag">DOCUMENTACIÓN TÉCNICA</span>
+        <h2 class="section__title">CATÁLOGOS Y FICHAS</h2>
+        <p class="section__lead">Descargá o visualizá nuestros catálogos técnicos completos con toda la información de perfiles, colores y sistemas.</p>
+      </div>
+
+      <div class="catalogos__grid">
+
+        <!-- Catálogo Veratec -->
+        <div class="catalogo__card">
+          <div class="catalogo__preview">
+            <img src="img/partners/catalogo-veratec.jpg" alt="Catálogo Veratec 2025" class="catalogo__thumb" />
+            <div class="catalogo__badge">2025</div>
+          </div>
+          <div class="catalogo__body">
+            <p class="catalogo__marca">&#9641; VERATEC</p>
+            <h3 class="catalogo__title">Catálogo Completo<br>Veratec 2025</h3>
+            <p class="catalogo__desc">Perfiles de PVC, sistemas de ventanas y puertas, dimensiones técnicas, colores disponibles y especificaciones de instalación.</p>
+            <div class="catalogo__actions">
+              <button class="btn btn--gold" onclick="abrirVisor('pdf/catalogo-veratec-2025.pdf', 'Catálogo Veratec 2025')">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                Ver PDF
+              </button>
+              <a href="pdf/catalogo-veratec-2025.pdf" download class="btn btn--outline-dark">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                Descargar
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Catálogo Yilmaz -->
+        <div class="catalogo__card">
+          <div class="catalogo__preview catalogo__preview--yilmaz">
+            <div class="catalogo__placeholder-img">
+              <span class="catalogo__brand-letter">Y</span>
+            </div>
+            <div class="catalogo__badge">2025</div>
+          </div>
+          <div class="catalogo__body">
+            <p class="catalogo__marca" style="color:#1a5fa8;">Y YILMAZ</p>
+            <h3 class="catalogo__title">Catálogo PVC<br>Yilmaz 2025</h3>
+            <p class="catalogo__desc">Sistema completo de perfiles PVC Yilmaz: ventanas corredizas, abatibles, oscilobatientes y soluciones para proyectos residenciales y comerciales.</p>
+            <div class="catalogo__actions">
+              <button class="btn btn--gold" onclick="abrirVisor('pdf/catalogo-yilmaz-2025.pdf', 'Catálogo Yilmaz PVC 2025')">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                Ver PDF
+              </button>
+              <a href="pdf/catalogo-yilmaz-2025.pdf" download class="btn btn--outline-dark">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                Descargar
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PDF VISOR MODAL ===== -->
+  <div class="pdf-modal" id="pdfModal" role="dialog" aria-modal="true" aria-label="Visor de PDF">
+    <div class="pdf-modal__backdrop" onclick="cerrarVisor()"></div>
+    <div class="pdf-modal__box">
+      <div class="pdf-modal__header">
+        <span class="pdf-modal__title" id="pdfModalTitle">Catálogo</span>
+        <div class="pdf-modal__controls">
+          <a id="pdfDownloadLink" href="#" download class="btn btn--gold btn--sm">Descargar PDF</a>
+          <button class="pdf-modal__close" onclick="cerrarVisor()" aria-label="Cerrar">&#10005;</button>
+        </div>
+      </div>
+      <div class="pdf-modal__body">
+        <iframe id="pdfFrame" src="" title="Visor PDF" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
   <!-- ===== GALERÍA ===== -->
   <section class="galeria" id="galeria">
     <div class="container">
       <div class="section__header">
-        <span class="tag tag--light">NUESTROS TRABAJOS</span>
-        <h2 class="section__title section__title--light">GALERÍA</h2>
+        <span class="tag tag--light">NUESTRA FÁBRICA</span>
+        <h2 class="section__title section__title--light">FRAME FACTORY EN ACCIÓN</h2>
+        <p class="section__lead" style="color:rgba(255,255,255,0.65)">Tecnología de punta, maquinaria automatizada y un equipo comprometido con la calidad.</p>
       </div>
     </div>
     <div class="galeria__grid">
       <div class="galeria__item galeria__item--1">
-        <div class="galeria__overlay"><a href="#contacto" class="galeria__link">CONTACT US</a></div>
+        <div class="galeria__overlay">
+          <span class="galeria__caption">Área de Mecanizado</span>
+        </div>
       </div>
       <div class="galeria__item galeria__item--2">
-        <div class="galeria__overlay"><a href="#contacto" class="galeria__link">CONTACT US</a></div>
+        <div class="galeria__overlay">
+          <span class="galeria__caption">Control de Producción</span>
+        </div>
       </div>
       <div class="galeria__item galeria__item--3">
-        <div class="galeria__overlay"><a href="#contacto" class="galeria__link">CONTACT US</a></div>
+        <div class="galeria__overlay">
+          <span class="galeria__caption">Maquinaria TK 503</span>
+        </div>
       </div>
       <div class="galeria__item galeria__item--4">
-        <div class="galeria__overlay"><a href="#contacto" class="galeria__link">CONTACT US</a></div>
+        <div class="galeria__overlay">
+          <span class="galeria__caption">Stock de Perfiles PVC</span>
+        </div>
       </div>
       <div class="galeria__item galeria__item--5">
-        <div class="galeria__overlay"><a href="#contacto" class="galeria__link">CONTACT US</a></div>
+        <div class="galeria__overlay">
+          <span class="galeria__caption">Proceso de Corte</span>
+        </div>
       </div>
       <div class="galeria__item galeria__item--6">
-        <div class="galeria__overlay"><a href="#contacto" class="galeria__link">CONTACT US</a></div>
+        <div class="galeria__overlay">
+          <span class="galeria__caption">Planta Industrial PITEC</span>
+        </div>
       </div>
+    </div>
+    <div class="galeria__cta container">
+      <a href="#contacto" class="btn btn--gold">Cotizá tu proyecto</a>
     </div>
   </section>
 
@@ -266,20 +458,20 @@
             <span class="logo__name" style="font-size:0.7rem;letter-spacing:0.1em;">FÁBRICA DE ABERTURAS EN PVC</span>
           </div>
         </div>
-        <p class="contacto__tagline">Somos Frame Factory — Tu socio estratégico en la industria de las aberturas.</p>
+        <p class="contacto__tagline">Tu socio estratégico en la industria de las aberturas. Distribuidor oficial Fenstech · Veratec · Yilmaz · Roto.</p>
         <div class="contacto__items">
           <div class="contacto__item">
             <span class="contacto__ico">✉️</span>
             <div>
               <strong>Email</strong>
-              <a href="mailto:contacto@framefactory.com.ar" class="contacto__link">contacto@framefactory.com.ar</a>
+              <a href="mailto:fabian@framefactory.com" class="contacto__link">fabian@framefactory.com</a>
             </div>
           </div>
           <div class="contacto__item">
             <span class="contacto__ico">📱</span>
             <div>
               <strong>Tel / WhatsApp</strong>
-              <a href="https://wa.me/541151182509" class="contacto__link">+54 (11) 5118 2509</a>
+              <a href="https://wa.me/59898066093" class="contacto__link">+598 98 066 093</a>
             </div>
           </div>
           <div class="contacto__item">
@@ -287,7 +479,16 @@
             <div>
               <strong>Dirección</strong>
               <span>Calle 1236 nro. 960 / Ingeniero Juan Allan</span>
-              <span>Florencio Varela / Provincia de Buenos Aires</span>
+              <span>Florencio Varela · Buenos Aires</span>
+              <span style="color:var(--gold);font-size:0.78rem;margin-top:2px;">Parque Industrial PITEC</span>
+            </div>
+          </div>
+          <div class="contacto__item">
+            <span class="contacto__ico">🌐</span>
+            <div>
+              <strong>Sitios web</strong>
+              <a href="https://www.framefactory.com.ar" target="_blank" class="contacto__link">www.framefactory.com.ar</a>
+              <a href="https://www.fenstech.com.ar" target="_blank" class="contacto__link">www.fenstech.com.ar</a>
             </div>
           </div>
         </div>
@@ -296,6 +497,9 @@
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
           </a>
           <a href="https://www.instagram.com/framefactoryoficial" target="_blank" class="social__btn" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="https://www.instagram.com/fenstechveratec" target="_blank" class="social__btn social__btn--fenstech" aria-label="Instagram Fenstech">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
           </a>
           <a href="https://www.linkedin.com/company/framefactoryarg" target="_blank" class="social__btn" aria-label="LinkedIn">
@@ -315,13 +519,13 @@
             </div>
             <div class="form__group">
               <label for="empresa">Empresa / Taller</label>
-              <input type="text" id="empresa" name="empresa" placeholder="Nombre de tu empresa" />
+              <input type="text" id="empresa-input" name="empresa" placeholder="Nombre de tu empresa" />
             </div>
           </div>
           <div class="form__row">
             <div class="form__group">
               <label for="telefono">Teléfono *</label>
-              <input type="tel" id="telefono" name="telefono" placeholder="+54 11 0000 0000" required />
+              <input type="tel" id="telefono" name="telefono" placeholder="+54 11 0000-0000" required />
             </div>
             <div class="form__group">
               <label for="email">Email *</label>
@@ -329,8 +533,19 @@
             </div>
           </div>
           <div class="form__group">
+            <label for="tipo">Tipo de cliente</label>
+            <select id="tipo" name="tipo">
+              <option value="">Seleccioná una opción</option>
+              <option value="arquitecto">Arquitecto / Estudio</option>
+              <option value="desarrollador">Desarrollador / Constructora</option>
+              <option value="carpintero">Carpintero / Taller</option>
+              <option value="particular">Particular</option>
+              <option value="otro">Otro</option>
+            </select>
+          </div>
+          <div class="form__group">
             <label for="mensaje">Mensaje</label>
-            <textarea id="mensaje" name="mensaje" rows="4" placeholder="Contanos sobre tu proyecto o consulta..."></textarea>
+            <textarea id="mensaje" name="mensaje" rows="4" placeholder="Contanos sobre tu proyecto, las dimensiones, cantidad de aberturas, colores preferidos..."></textarea>
           </div>
           <button type="submit" class="btn btn--gold btn--full">Enviar consulta</button>
         </form>
@@ -341,21 +556,22 @@
   <!-- ===== FOOTER ===== -->
   <footer class="footer" id="footer">
     <div class="container footer__inner">
-      <p class="footer__brand">Somos Frame Factory</p>
+      <p class="footer__brand">Frame Factory · Fenstech Veratec</p>
       <div class="footer__nav">
         <a href="#empresa">Empresa</a>
         <a href="#productos">Productos</a>
+        <a href="#colores">Colores</a>
+        <a href="#catalogos">Catálogos</a>
         <a href="#galeria">Galería</a>
-        <a href="#contacto">Cotizar Proyecto</a>
-        <a href="#footer">Contacto</a>
+        <a href="#contacto">Contacto</a>
       </div>
       <p class="footer__copy">&copy; 2025 Frame Factory — Fábrica de Aberturas en PVC. Todos los derechos reservados.</p>
-      <p class="footer__address">Calle 1236 nro. 960 / Ingeniero Juan Allan / Florencio Varela / Provincia de Buenos Aires</p>
+      <p class="footer__address">Calle 1236 nro. 960 · Ingeniero Juan Allan · Florencio Varela · Buenos Aires · Parque Industrial PITEC</p>
     </div>
   </footer>
 
   <!-- WhatsApp float -->
-  <a href="https://wa.me/541151182509" target="_blank" class="wa-float" aria-label="WhatsApp">
+  <a href="https://wa.me/59898066093" target="_blank" class="wa-float" aria-label="WhatsApp Frame Factory">
     <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.117.552 4.103 1.516 5.83L.057 23.804a.75.75 0 00.922.943l6.104-1.433A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.01-1.374l-.36-.213-3.729.876.892-3.627-.234-.373A9.818 9.818 0 1112 21.818z"/></svg>
   </a>
 
