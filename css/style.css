@@ -265,7 +265,6 @@ ul { list-style: none; }
 }
 .fase__bg {
   position: absolute; inset: 0;
-  background-image: url('../img/fabrica/fase-bg.jpg');
   background-size: cover;
   background-position: center;
 }
@@ -397,10 +396,8 @@ ul { list-style: none; }
 }
 .upa-eco__card:hover .upa-eco__img { transform: scale(1.04); }
 
-/* Real images for UPA cards */
-.upa-eco__img--arquitectos  { background-image: url('../img/partners/instalacion-pvc.jpg'); background-position: center top; }
-.upa-eco__img--desarrolladores { background-image: url('../img/hero/hero1.jpg'); }
-.upa-eco__img--carpinteros  { background-image: url('../img/hero/hero2.jpg'); }
+/* Real images for UPA cards — cargadas via lazy load (data-bg) */
+.upa-eco__img--arquitectos  { background-position: center top; }
 
 .upa-eco__content {
   padding: 24px 28px 28px;
@@ -544,16 +541,17 @@ ul { list-style: none; }
   background-position: center;
   transition: transform 0.4s ease;
 }
-.tipo__img--banderola    { background-color: #c8c0b0; background-image: url('../img/galeria/g4.jpg'); }
-.tipo__img--corrediza    { background-color: #b8c0c8; background-image: url('../img/galeria/g6.jpg'); }
-.tipo__img--corrediza2   { background-color: #bcc8c0; background-image: url('../img/partners/instalacion-pvc.jpg'); background-position: center; }
-.tipo__img--corrediza3   { background-color: #c0b8c8; background-image: url('../img/partners/perfiles1.jpg'); }
-.tipo__img--abrir1       { background-color: #c8c8b0; background-image: url('../img/partners/perfiles2.jpg'); }
-.tipo__img--abrir2       { background-color: #c0c8c8; background-image: url('../img/partners/perfiles3.jpg'); }
-.tipo__img--oscilo       { background-color: #b0c0c8; background-image: url('../img/galeria/g3.jpg'); }
-.tipo__img--fijo         { background-color: #c8b0b8; background-image: url('../img/galeria/g2.jpg'); }
-.tipo__img--practicable  { background-color: #b8c8b0; background-image: url('../img/partners/instalacion-pvc.jpg'); }
-.tipo__img--proyectante  { background-color: #c0b0c0; background-image: url('../img/galeria/g1.jpg'); }
+/* background-image cargado via lazy load (data-bg) */
+.tipo__img--banderola    { background-color: #c8c0b0; }
+.tipo__img--corrediza    { background-color: #b8c0c8; }
+.tipo__img--corrediza2   { background-color: #bcc8c0; background-position: center; }
+.tipo__img--corrediza3   { background-color: #c0b8c8; }
+.tipo__img--abrir1       { background-color: #c8c8b0; }
+.tipo__img--abrir2       { background-color: #c0c8c8; }
+.tipo__img--oscilo       { background-color: #b0c0c8; }
+.tipo__img--fijo         { background-color: #c8b0b8; }
+.tipo__img--practicable  { background-color: #b8c8b0; }
+.tipo__img--proyectante  { background-color: #c0b0c0; }
 
 .tipo__name {
   display: block;
@@ -805,12 +803,13 @@ ul { list-style: none; }
   background: #444;
 }
 /* Real gallery images */
-.galeria__item--1 { background-image: url('../img/galeria/g1.jpg'); background-size: cover; background-position: center; }
-.galeria__item--2 { background-image: url('../img/galeria/g2.jpg'); background-size: cover; background-position: center; }
-.galeria__item--3 { background-image: url('../img/galeria/g3.jpg'); background-size: cover; background-position: center; }
-.galeria__item--4 { background-image: url('../img/galeria/g4.jpg'); background-size: cover; background-position: center; }
-.galeria__item--5 { background-image: url('../img/galeria/g5.jpg'); background-size: cover; background-position: center; }
-.galeria__item--6 { background-image: url('../img/galeria/g6.jpg'); background-size: cover; background-position: center; }
+/* background-image cargado via lazy load (data-bg) */
+.galeria__item--1,
+.galeria__item--2,
+.galeria__item--3,
+.galeria__item--4,
+.galeria__item--5,
+.galeria__item--6 { background-size: cover; background-position: center; }
 
 .galeria__item::before {
   content: '';

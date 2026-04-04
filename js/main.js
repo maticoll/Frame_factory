@@ -6,7 +6,7 @@ window.addEventListener('scroll', () => {
 
 // ===== HAMBURGER MENU =====
 const hamburger = document.getElementById('hamburger');
-const nav = document.getElementById('nav');
+const nav       = document.getElementById('nav');
 
 hamburger.addEventListener('click', () => {
   hamburger.classList.toggle('active');
@@ -23,10 +23,13 @@ nav.querySelectorAll('.nav__link').forEach(link => {
 });
 
 document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape' && nav.classList.contains('open')) {
-    hamburger.classList.remove('active');
-    nav.classList.remove('open');
-    document.body.style.overflow = '';
+  if (e.key === 'Escape') {
+    if (nav.classList.contains('open')) {
+      hamburger.classList.remove('active');
+      nav.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    cerrarVisor();
   }
 });
 
@@ -82,14 +85,14 @@ const observer = new IntersectionObserver((entries) => {
       observer.unobserve(entry.target);
     }
   });
-}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 
 document.querySelectorAll(
-  '.upa-eco__card, .stat__card, .tipo__card, .fase__step, .galeria__item, .partner-logo'
+  '.upa-eco__card, .stat__card, .tipo__card, .galeria__item, .partner-logo, .catalogo__card, .color__item'
 ).forEach((el, i) => {
   el.style.opacity = '0';
   el.style.transform = 'translateY(24px)';
-  el.style.transition = `opacity 0.5s ease ${i * 0.06}s, transform 0.5s ease ${i * 0.06}s`;
+  el.style.transition = `opacity 0.5s ease ${i * 0.05}s, transform 0.5s ease ${i * 0.05}s`;
   observer.observe(el);
 });
 
@@ -97,12 +100,38 @@ document.head.insertAdjacentHTML('beforeend',
   '<style>.visible { opacity: 1 !important; transform: translateY(0) !important; }</style>'
 );
 
+// ===== COUNTER ANIMATION =====
+function animateCounter(el, target, duration = 1800) {
+  let start = 0;
+  const step = target / (duration / 16);
+  const timer = setInterval(() => {
+    start = Math.min(start + step, target);
+    el.textContent = Math.floor(start) + (target >= 100 ? '+' : '');
+    if (start >= target) clearInterval(timer);
+  }, 16);
+}
+
+const statsObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const el     = entry.target;
+      const target = parseInt(el.dataset.target, 10);
+      if (!isNaN(target)) animateCounter(el, target);
+      statsObserver.unobserve(el);
+    }
+  });
+}, { threshold: 0.5 });
+
+document.querySelectorAll('.stat__num[data-target]').forEach(el => {
+  statsObserver.observe(el);
+});
+
 // ===== ACTIVE NAV ON SCROLL =====
 const sections = document.querySelectorAll('section[id]');
 window.addEventListener('scroll', () => {
   const scrollY = window.scrollY + 120;
   sections.forEach(section => {
-    const id = section.getAttribute('id');
+    const id   = section.getAttribute('id');
     const link = document.querySelector(`.nav__link[href="#${id}"]`);
     if (!link) return;
     if (scrollY >= section.offsetTop && scrollY < section.offsetTop + section.offsetHeight) {
@@ -124,8 +153,50 @@ if (form) {
       form.innerHTML = `
         <div class="form__success">
           <h4>✓ ¡Consulta enviada!</h4>
-          <p>Gracias por contactarnos. Te responderemos a la brevedad.</p>
+          <p>Gracias por contactarnos. Te respondemos a la brevedad.</p>
         </div>`;
     }, 1200);
   });
 }
+
+// ===== PDF VISOR =====
+function abrirVisor(pdfPath, titulo) {
+  const modal    = document.getElementById('pdfModal');
+  const frame    = document.getElementById('pdfFrame');
+  const titleEl  = document.getElementById('pdfModalTitle');
+  const dlLink   = document.getElementById('pdfDownloadLink');
+
+  frame.src           = pdfPath;
+  titleEl.textContent = titulo;
+  dlLink.href         = pdfPath;
+  dlLink.download     = pdfPath.split('/').pop();
+
+  modal.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function cerrarVisor() {
+  const modal = document.getElementById('pdfModal');
+  const frame = document.getElementById('pdfFrame');
+  if (!modal.classList.contains('open')) return;
+  modal.classList.remove('open');
+  frame.src = '';
+  document.body.style.overflow = '';
+}
+
+// Expose globally (called from onclick in HTML)
+window.abrirVisor  = abrirVisor;
+window.cerrarVisor = cerrarVisor;
+
+// ===== LAZY BACKGROUND IMAGES =====
+const bgObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const el = entry.target;
+      el.style.backgroundImage = `url('${el.dataset.bg}')`;
+      bgObserver.unobserve(el);
+    }
+  });
+}, { rootMargin: '0px 0px 300px 0px' });
+
+document.querySelectorAll('[data-bg]').forEach(el => bgObserver.observe(el));
