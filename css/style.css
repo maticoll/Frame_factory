@@ -525,33 +525,34 @@ ul { list-style: none; }
 .tipo__grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 0;
+  gap: 20px;
 }
 .tipo__card {
   position: relative;
   cursor: pointer;
   overflow: hidden;
-  border: 1px solid #e0e0e0;
 }
 .tipo__card:hover .tipo__img  { transform: scale(1.06); }
-.tipo__card:hover .tipo__name { background: var(--gold); color: var(--white); }
+.tipo__card:hover .tipo__name { color: var(--gold); }
 .tipo__img {
   height: 180px;
-  background-size: cover;
+  background-size: contain;
   background-position: center;
+  background-repeat: no-repeat;
+  background-color: #ffffff;
   transition: transform 0.4s ease;
 }
 /* background-image cargado via lazy load (data-bg) */
-.tipo__img--banderola    { background-color: #ffffff; background-size: contain; background-repeat: no-repeat; }
-.tipo__img--corrediza    { background-color: #b8c0c8; }
-.tipo__img--corrediza2   { background-color: #bcc8c0; background-position: center; }
-.tipo__img--corrediza3   { background-color: #c0b8c8; }
-.tipo__img--abrir1       { background-color: #c8c8b0; }
-.tipo__img--abrir2       { background-color: #c0c8c8; }
-.tipo__img--oscilo       { background-color: #b0c0c8; }
-.tipo__img--fijo         { background-color: #c8b0b8; }
-.tipo__img--practicable  { background-color: #b8c8b0; }
-.tipo__img--proyectante  { background-color: #c0b0c0; }
+.tipo__img--banderola    { }
+.tipo__img--corrediza    { }
+.tipo__img--corrediza2   { }
+.tipo__img--corrediza3   { }
+.tipo__img--abrir1       { }
+.tipo__img--abrir2       { }
+.tipo__img--oscilo       { }
+.tipo__img--fijo         { }
+.tipo__img--practicable  { }
+.tipo__img--proyectante  { }
 
 .tipo__name {
   display: block;
@@ -561,9 +562,9 @@ ul { list-style: none; }
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  background: var(--white);
+  background: transparent;
   color: var(--dark);
-  transition: background var(--transition), color var(--transition);
+  transition: color var(--transition);
 }
 
 /* ===== COLORES VERATEC ===== */
