@@ -1,0 +1,16 @@
+{
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "Set-Location 'C:\\Users\\Usuario\\OneDrive\\Desktop\\CLAUDIO\\framefactory\\Frame_factory'; $status = git status --porcelain; if ($status) { git add -A; git commit -m 'update: cambios guardados'; git push } else { git push } 2>$null; exit 0",
+            "shell": "powershell",
+            "async": true
+          }
+        ]
+      }
+    ]
+  }
+}
