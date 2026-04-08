@@ -542,7 +542,7 @@ ul { list-style: none; }
   transition: transform 0.4s ease;
 }
 /* background-image cargado via lazy load (data-bg) */
-.tipo__img--banderola    { background-color: #c8c0b0; }
+.tipo__img--banderola    { background-color: #ffffff; background-size: contain; background-repeat: no-repeat; }
 .tipo__img--corrediza    { background-color: #b8c0c8; }
 .tipo__img--corrediza2   { background-color: #bcc8c0; background-position: center; }
 .tipo__img--corrediza3   { background-color: #c0b8c8; }
