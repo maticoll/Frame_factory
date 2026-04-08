@@ -585,9 +585,14 @@ ul { list-style: none; }
 .colores__img { width: 100%; display: block; }
 
 .colores__list {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 10px;
+}
+@media (max-width: 600px) {
+  .colores__list {
+    grid-template-columns: 1fr;
+  }
 }
 .color__item {
   display: flex;
