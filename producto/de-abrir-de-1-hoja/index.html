@@ -132,6 +132,78 @@
     </div>
   </section>
 
+  <!-- ===== CONTACTO ===== -->
+  <section class="contacto section section--dark" id="contacto">
+    <div class="container contacto__grid">
+      <div class="contacto__info">
+        <div class="logo logo--white" style="margin-bottom:28px;">
+          <img src="../../img/logo.png" alt="Frame Factory" class="logo__img" />
+        </div>
+        <p class="contacto__tagline">Tu socio estratégico en la industria de las aberturas. Distribuidor oficial Fenstech · Veratec · Yilmaz · Roto.</p>
+        <div class="contacto__items">
+          <div class="contacto__item">
+            <span class="contacto__ico">✉️</span>
+            <div>
+              <strong>Email</strong>
+              <a href="mailto:fabian@framefactory.com.uy" class="contacto__link">fabian@framefactory.com.uy</a>
+            </div>
+          </div>
+        </div>
+        <div class="contacto__social">
+          <a href="https://www.instagram.com/fenstechveratec" target="_blank" class="social__btn social__btn--fenstech" aria-label="Instagram Fenstech">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/company/framefactoryarg" target="_blank" class="social__btn" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="contacto__form-wrap">
+        <h3>Cotizá tu proyecto</h3>
+        <p>Completá el formulario y te respondemos a la brevedad.</p>
+        <form class="contacto__form" id="contactForm">
+          <div class="form__row">
+            <div class="form__group">
+              <label for="nombre">Nombre y apellido *</label>
+              <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required />
+            </div>
+            <div class="form__group">
+              <label for="empresa">Empresa / Taller</label>
+              <input type="text" id="empresa-input" name="empresa" placeholder="Nombre de tu empresa" />
+            </div>
+          </div>
+          <div class="form__row">
+            <div class="form__group">
+              <label for="telefono">Teléfono *</label>
+              <input type="tel" id="telefono" name="telefono" placeholder="+598 900 000 000" required />
+            </div>
+            <div class="form__group">
+              <label for="email">Email *</label>
+              <input type="email" id="email" name="email" placeholder="tu@email.com" required />
+            </div>
+          </div>
+          <div class="form__group">
+            <label for="tipo">Tipo de cliente</label>
+            <select id="tipo" name="tipo">
+              <option value="">Seleccioná una opción</option>
+              <option value="arquitecto">Arquitecto / Estudio</option>
+              <option value="desarrollador">Desarrollador / Constructora</option>
+              <option value="carpintero">Carpintero / Taller</option>
+              <option value="particular">Particular</option>
+              <option value="otro">Otro</option>
+            </select>
+          </div>
+          <div class="form__group">
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="4" placeholder="Contanos sobre tu proyecto, las dimensiones, cantidad de aberturas, colores preferidos..."></textarea>
+          </div>
+          <button type="submit" class="btn btn--gold btn--full">Enviar consulta</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
   <!-- ===== FOOTER ===== -->
   <footer class="footer" id="footer">
     <div class="container footer__inner">
