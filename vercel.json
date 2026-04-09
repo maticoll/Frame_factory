@@ -3,6 +3,12 @@
   "buildCommand": null,
   "outputDirectory": ".",
   "installCommand": null,
+  "rewrites": [
+    { "source": "/producto/:slug", "destination": "/producto/:slug/index.html" },
+    { "source": "/producto/:slug/", "destination": "/producto/:slug/index.html" },
+    { "source": "/categoria-producto/:slug", "destination": "/categoria-producto/:slug/index.html" },
+    { "source": "/categoria-producto/:slug/", "destination": "/categoria-producto/:slug/index.html" }
+  ],
   "headers": [
     {
       "source": "/pdf/(.*)",
