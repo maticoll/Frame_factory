@@ -53,7 +53,18 @@
     <div class="container">
       <div class="producto__grid">
         <div class="producto__imagen">
-          <img src="../../img/galeria/corrediza.png" alt="Ventana Corrediza de PVC" />
+          <div class="producto__img-tabs">
+            <button class="producto__img-tab active" data-target="producto">Producto</button>
+            <button class="producto__img-tab" data-target="perfil">Perfil</button>
+          </div>
+          <div class="producto__img-container">
+            <div class="producto__img-item active" data-img="producto">
+              <img src="../../img/galeria/corrediza.png" alt="Ventana Corrediza de PVC" />
+            </div>
+            <div class="producto__img-item" data-img="perfil">
+              <img src="../../img/rieles/corrediza.png" alt="Perfil Corrediza" />
+            </div>
+          </div>
         </div>
         <div class="producto__info">
           <span class="producto__cat">Ventanas de PVC</span>

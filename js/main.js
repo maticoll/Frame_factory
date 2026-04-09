@@ -200,3 +200,19 @@ const bgObserver = new IntersectionObserver((entries) => {
 }, { rootMargin: '0px 0px 300px 0px' });
 
 document.querySelectorAll('[data-bg]').forEach(el => bgObserver.observe(el));
+
+// ===== PRODUCT IMAGE TABS =====
+document.querySelectorAll('.producto__img-tab').forEach(tab => {
+  tab.addEventListener('click', function() {
+    const container = this.closest('.producto__imagen');
+    const target = this.dataset.target;
+    
+    // Update tabs
+    container.querySelectorAll('.producto__img-tab').forEach(t => t.classList.remove('active'));
+    this.classList.add('active');
+    
+    // Update images
+    container.querySelectorAll('.producto__img-item').forEach(img => img.classList.remove('active'));
+    container.querySelector(`.producto__img-item[data-img="${target}"]`).classList.add('active');
+  });
+});

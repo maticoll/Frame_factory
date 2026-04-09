@@ -533,41 +533,69 @@ ul { list-style: none; }
   cursor: pointer;
   overflow: hidden;
   text-decoration: none;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
-.tipo__card:hover .tipo__img  { transform: scale(1.06); }
-.tipo__card:hover .tipo__name { color: var(--gold); }
-.tipo__img {
+.tipo__card:hover {
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  transform: translateY(-4px);
+}
+.tipo__img-wrap {
+  position: relative;
   height: 180px;
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-color: #ffffff;
-  transition: transform 0.4s ease;
+  overflow: hidden;
+  background: #fff;
 }
-/* background-image cargado via lazy load (data-bg) */
-.tipo__img--banderola    { }
-.tipo__img--corrediza    { }
-.tipo__img--corrediza2   { }
-.tipo__img--corrediza3   { }
-.tipo__img--abrir1       { }
-.tipo__img--abrir2       { }
-.tipo__img--oscilo       { }
-.tipo__img--fijo         { }
-.tipo__img--practicable  { }
-.tipo__img--proyectante  { }
-
+.tipo__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+.tipo__img--main {
+  opacity: 1;
+  z-index: 1;
+}
+.tipo__img--riel {
+  opacity: 0;
+  z-index: 2;
+}
+.tipo__card:hover .tipo__img--main {
+  opacity: 0;
+  transform: scale(1.08);
+}
+.tipo__card:hover .tipo__img--riel {
+  opacity: 1;
+  transform: scale(1.08);
+}
+.tipo__info {
+  text-align: center;
+  padding: 12px 8px 16px;
+}
 .tipo__name {
   display: block;
-  text-align: center;
-  padding: 12px 8px;
-  font-size: 0.65rem;
+  font-size: 0.7rem;
   font-weight: 700;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  background: transparent;
   color: var(--dark);
   transition: color var(--transition);
+  margin-bottom: 4px;
 }
+.tipo__cat {
+  display: block;
+  font-size: 0.6rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  color: var(--gold);
+  text-transform: uppercase;
+}
+.tipo__card:hover .tipo__name { color: var(--gold); }
 
 /* ===== COLORES VERATEC ===== */
 .colores { background: #222; }
@@ -1174,17 +1202,6 @@ ul { list-style: none; }
   gap: 60px;
   align-items: start;
 }
-.producto__imagen {
-  background: var(--white);
-  border-radius: 12px;
-  padding: 40px;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.1);
-}
-.producto__imagen img {
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-}
 .producto__info {
   padding-top: 20px;
 }
@@ -1253,6 +1270,74 @@ ul { list-style: none; }
   display: flex;
   gap: 16px;
   flex-wrap: wrap;
+}
+
+/* ===== PRODUCTO IMAGE TABS ===== */
+.producto__imagen {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+.producto__img-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+.producto__img-tab {
+  flex: 1;
+  padding: 10px 16px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-align: center;
+  background: rgba(0,0,0,0.05);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  color: var(--dark);
+  transition: all 0.3s ease;
+}
+.producto__img-tab:hover {
+  background: rgba(188, 162, 105, 0.15);
+}
+.producto__img-tab.active {
+  background: var(--gold);
+  color: var(--white);
+}
+.producto__img-container {
+  position: relative;
+  min-height: 280px;
+}
+.producto__img-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.producto__img-item img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+.producto__img-item.active {
+  opacity: 1;
+  position: relative;
+}
+/* Hover effect on product images */
+.producto__img-container:hover .producto__img-item.active img {
+  transform: scale(1.05);
+}
+.producto__img-item img {
+  transition: transform 0.4s ease;
 }
 
 /* ===== PRODUCTOS RELACIONADOS ===== */
